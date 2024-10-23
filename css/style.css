@@ -1,0 +1,177 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    color: #333;
+}
+
+p {
+    text-align: center;
+    color: #666;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+header {
+    background-color: hwb(185 25% 40%);
+    padding: 10px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+nav a {
+    margin: 0 15px;
+    padding: 10px;
+    background-color: #5cb85c;
+    color: white;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #4cae4c;
+}
+
+/* Banner Section */
+.welcome {
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.welcome img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+/* Our Headquarters Section */
+.headquarters {
+    text-align: center;
+    padding: 20px;
+}
+
+.headquarters img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+}
+
+/* Message Us Section */
+.message {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.message h2 {
+    color: #333;
+}
+
+.message form {
+    width: 100%;
+    margin: 20px auto;
+    max-width: 500px; /* Limit form width */
+    text-align: left; /* Align the text and elements left */
+}
+
+.message label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.message input[type="text"], 
+.message input[type="date"], 
+.message textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Styles for radio buttons */
+.gender-options {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.gender-options input {
+    margin-right: 5px;
+}
+
+.message button {
+    width: 100%;
+    padding: 10px;
+    background-color: #5cb85c;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.message button:hover {
+    background-color: #4cae4c;
+}
+
+/* Profile Page (for "Our Profile" section) */
+.profile-banner {
+    text-align: center;
+    padding: 30px;
+    background-color: #e0e0e0;
+}
+
+.profile-banner img {
+    max-width: 100%;
+    height: auto;
+}
+
+.about-company {
+    padding: 20px;
+    text-align: center;
+}
+
+.about-company img.profile-pic {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: hsl(271, 36%, 68%);
+    padding: 10px;
+    text-align: center;
+    color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+    
+    nav a {
+        margin: 10px 0;
+    }
+    
+    .headquarters img {
+        width: 120px;
+        height: 120px;
+    }
+}
