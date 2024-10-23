@@ -1,18 +1,17 @@
-/* General Styles */
+* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-align: left; /* Align everything to the left */
 }
 
 h1, h2, h3 {
-    text-align: center;
     color: #333;
 }
 
 p {
-    text-align: center;
     color: #666;
 }
 
@@ -22,14 +21,24 @@ a {
 }
 
 header {
-    background-color: hwb(185 25% 40%);
+    background-color: #f8f8f8;
     padding: 10px;
-    text-align: center;
+    text-align: center; /* Keep header elements centered */
+}
+.main-header .header-left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
 
+.header-left img {
+    margin-right: 10px;
+}
+
+/* Navigation */
 nav {
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Center navigation links */
     margin: 10px 0;
 }
 
@@ -49,6 +58,7 @@ nav a:hover {
 .welcome {
     padding: 20px;
     background-color: #f0f0f0;
+    text-align: left; /* Align welcome section to the left */
 }
 
 .welcome img {
@@ -59,8 +69,21 @@ nav a:hover {
 
 /* Our Headquarters Section */
 .headquarters {
-    text-align: center;
     padding: 20px;
+}
+
+.headquarters h2 {
+    text-align: left; /* Align the heading to the left */
+}
+
+.locations {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.locations .location h3 {
+    text-align: center; /* Keep city names centered under images */
 }
 
 .headquarters img {
@@ -78,59 +101,66 @@ nav a:hover {
 
 .message h2 {
     color: #333;
+    text-align: left; /* Align heading to the left */
 }
 
-.message form {
+.message-form {
     width: 100%;
-    margin: 20px auto;
-    max-width: 500px; /* Limit form width */
-    text-align: left; /* Align the text and elements left */
-}
-
-.message label {
+    max-width: 400px;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  .message-form label {
     display: block;
     margin-bottom: 5px;
-    color: #333;
-}
-
-.message input[type="text"], 
-.message input[type="date"], 
-.message textarea {
-    display: block;
+    font-weight: bold;
+  }
+  
+  .message-form input[type="text"],
+  .message-form input[type="date"],
+  .message-form textarea {
     width: 100%;
+    margin-bottom: 15px;
     padding: 10px;
-    margin-bottom: 10px;
     border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-/* Styles for radio buttons */
-.gender-options {
+    border-radius: 4px;
+  }
+  
+  .message-form .gender-options {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
-}
-
-.gender-options input {
+    margin-bottom: 15px;
+  }
+  
+  .message-form .gender-options input {
     margin-right: 5px;
-}
-
-.message button {
+  }
+  
+  .message-form .gender-options label {
+    margin-right: 10px;
+  }
+  
+  .message-form textarea {
+    height: 100px;
+    resize: none;
+  }
+  
+  .message-form button {
     width: 100%;
     padding: 10px;
     background-color: #5cb85c;
     border: none;
     color: white;
     cursor: pointer;
-}
-
-.message button:hover {
+  }
+  
+  .message-form button:hover {
     background-color: #4cae4c;
-}
-
+  }
 /* Profile Page (for "Our Profile" section) */
 .profile-banner {
-    text-align: center;
+    text-align: left;
     padding: 30px;
     background-color: #e0e0e0;
 }
@@ -142,7 +172,7 @@ nav a:hover {
 
 .about-company {
     padding: 20px;
-    text-align: center;
+    text-align: left;
 }
 
 .about-company img.profile-pic {
@@ -154,7 +184,7 @@ nav a:hover {
 
 /* Footer */
 footer {
-    background-color: hsl(271, 36%, 68%);
+    background-color: #f8f8f8;
     padding: 10px;
     text-align: center;
     color: #666;
@@ -173,5 +203,10 @@ footer {
     .headquarters img {
         width: 120px;
         height: 120px;
+    }
+
+    .locations {
+        flex-direction: column;
+        align-items: center;
     }
 }

@@ -9,10 +9,13 @@
 <body>
     <!--Logo icon & Navigasi Bar-->
     <header class="main-header">
-        <!--logo-->
-        <div class="logo-icon"></div>
+        <!--Logo and Title-->
+        <div class="header-left">
+            <img src="https://via.placeholder.com/50" alt="Logo" class="logo">
+            <h1 class="website-title">Page RevoU Latihan</h1>
+        </div>
 
-        <!--Navigasi-->
+        <!--Navigation-->
         <nav>
             <a href="#section-home">Home</a>
             <a href="#section-profile">Our Profile</a>
@@ -23,7 +26,7 @@
 
     <hr />
 
-    <!--Konten-->
+    <!--Main Content-->
     <main>
         <!--Section Home-->
         <section id="section-home">
@@ -35,7 +38,7 @@
                 <p>Ini adalah website latihan pertama</p>
 
                 <!--Photo Banner-->
-                <div> class= "photo-banner"</div>
+                <div class="photo-banner"></div>
             </article>
         </section>
 
@@ -48,7 +51,7 @@
             </header>
 
             <article>
-                <div>class= "Profile-article"</div>
+                <div class="Profile-article"></div>
             </article>
         </section>
 
@@ -61,7 +64,6 @@
             </header>
         </section>
     </main>
-
 
     <section class="headquarters">
         <h2>Our Headquarters</h2>
@@ -83,33 +85,48 @@
 
     <hr />
     
-        <!--Section Message-->
-        <section id="section-message">
-        </form>
+    <!--Section Message Us-->
+    <section id="section-message">
         <h2>Message Us</h2>
-        <form id="messageForm">
+        <form id="messageForm" class="message-form">
             <label for="name">Nama:</label>
             <input type="text" id="name" name="name" required>
-    
+        
             <label for="dob">Tanggal Lahir:</label>
             <input type="date" id="dob" name="dob" required>
-    
+        
             <label for="gender">Jenis Kelamin:</label>
-            <input type="radio" id="male" name="gender" value="Laki-Laki" required> Laki-Laki
-            <input type="radio" id="female" name="gender" value="Perempuan"> Perempuan
-    
+            <div class="gender-options">
+                <input type="radio" id="female" name="gender" value="Perempuan" required>
+                <label for="female">Perempuan</label>
+                <input type="radio" id="male" name="gender" value="Laki-Laki">
+                <label for="male">Laki-Laki</label>
+            </div>
+        
             <label for="message">Pesan:</label>
             <textarea id="message" name="message" required></textarea>
-    
+        
             <button type="submit">Submit</button>
         </form>
-        <div id="formResult"></div>
+    
+        <!-- Table to display the submitted data -->
+        <h3>Submission Result:</h3>
+        <table id="resultTable" border="1" style="width: 100%; margin-top: 20px; display: none;">
+            <thead>
+                <tr>
+                    <th>Current Time</th>
+                    <th>Nama</th>
+                    <th>Tanggal Lahir</th>
+                    <th>Jenis Kelamin</th>
+                    <th>Pesan</th>
+                </tr>
+            </thead>
+            <tbody id="formResult">
+            </tbody>
+        </table>
     </section>
 
-    <footer>
-        <p>Created by cannesya@2024</p>
-    </footer>
-
-    <script src="Js/script.js"></script>
+    <!-- Link to the external JavaScript file -->
+    <script src="js/script.js"></script>
 </body>
 </html>
