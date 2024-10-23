@@ -1,107 +1,69 @@
-* General Styles */
 body {
     font-family: Arial, sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    text-align: left; /* Align everything to the left */
 }
 
-h1, h2, h3 {
-    color: #333;
-}
-
-p {
-    color: #666;
-}
-
-a {
-    text-decoration: none;
-    color: #333;
-}
-
-header {
-    background-color: #f8f8f8;
-    padding: 10px;
-    text-align: center; /* Keep header elements centered */
-}
-.main-header .header-left {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-.header-left img {
-    margin-right: 10px;
-}
-
-/* Navigation */
-nav {
-    display: flex;
-    justify-content: center; /* Center navigation links */
-    margin: 10px 0;
-}
-
-nav a {
-    margin: 0 15px;
-    padding: 10px;
-    background-color: #5cb85c;
-    color: white;
-    border-radius: 5px;
-}
-
-nav a:hover {
-    background-color: #4cae4c;
-}
-
-/* Banner Section */
-.welcome {
-    padding: 20px;
-    background-color: #f0f0f0;
-    text-align: left; /* Align welcome section to the left */
-}
-
-.welcome img {
-    max-width: 100%;
-    height: auto;
-    margin-top: 20px;
-}
-
-/* Our Headquarters Section */
-.headquarters {
-    padding: 20px;
-}
-
-.headquarters h2 {
-    text-align: left; /* Align the heading to the left */
-}
-
-.locations {
+.main-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px;
+    background: #333;
+    color: #fff;
 }
 
-.locations .location h3 {
-    text-align: center; /* Keep city names centered under images */
+.header-left {
+    display: flex;
+    align-items: center;
 }
 
-.headquarters img {
+.logo {
+    margin-right: 10px;
+    width: 50px; 
+    height: 50px; 
     border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    margin: 10px;
+    object-fit: cover;
 }
 
-/* Message Us Section */
-.message {
-    padding: 20px;
-    background-color: #f9f9f9;
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
 }
 
-.message h2 {
+nav a:hover {
+    text-decoration: underline;
+}
+
+.photo-banner {
+    width: 100%; 
+    max-width: 1200px; 
+    height: 400px; 
+    background-image: url('https://www.myprecious-shop.gr/wp-content/uploads/2021/10/about-promo-scaled.jpg'); /* Updated image URL */
+    background-size: cover; 
+    background-position: center; 
+    margin: 20px auto; 
+}
+
+h1, h2 {
     color: #333;
-    text-align: left; /* Align heading to the left */
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+article {
+    padding: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: #fff;
 }
 
 .message-form {
@@ -158,55 +120,32 @@ nav a:hover {
   .message-form button:hover {
     background-color: #4cae4c;
   }
-/* Profile Page (for "Our Profile" section) */
-.profile-banner {
-    text-align: left;
-    padding: 30px;
-    background-color: #e0e0e0;
+
+table {
+    border-collapse: collapse;
 }
 
-.profile-banner img {
-    max-width: 100%;
-    height: auto;
-}
-
-.about-company {
-    padding: 20px;
-    text-align: left;
-}
-
-.about-company img.profile-pic {
-    border-radius: 50%;
-    width: 200px;
-    height: 200px;
-    margin-bottom: 20px;
-}
-
-/* Footer */
-footer {
-    background-color: #f8f8f8;
+th, td {
     padding: 10px;
-    text-align: center;
-    color: #666;
+    text-align: left;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-    }
-    
-    nav a {
-        margin: 10px 0;
-    }
-    
-    .headquarters img {
-        width: 120px;
-        height: 120px;
-    }
+/* Add styling for round location images and parallel layout */
+.locations {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+}
 
-    .locations {
-        flex-direction: column;
-        align-items: center;
-    }
+.location {
+    flex: 1;
+    text-align: center;
+}
+
+.location img {
+    width: 100px; /* Adjust as needed */
+    height: 100px; /* Adjust as needed */
+    border-radius: 50%; /* Make the images round */
+    object-fit: cover;
 }

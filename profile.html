@@ -3,36 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Profile</title>
+    <title>Our Profile - Page RevoU Latihan</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
+    <!--Logo icon & Navigation Bar-->
+    <header class="main-header">
+        <div class="header-left">
+            <img src="https://i.pinimg.com/originals/09/ae/cd/09aecd8a58bed6ba95bf201db60df951.png" alt="Logo" class="logo">
+            <h1 class="website-title">Page RevoU Latihan</h1>
+        </div>
         <nav>
             <a href="index.html">Home</a>
             <a href="profile.html">Our Profile</a>
-            <a href="#">Portfolio</a>
-            <a href="#">Message Us</a>
+            <a href="#section-portfolio">Portfolio</a>
+            <a href="#section-message">Message Us</a>
         </nav>
     </header>
 
-    <section class="profile-banner">
-        <img src="https://via.placeholder.com/1366x478" alt="Company Banner">
-    </section>
+    <hr />
 
-    <section class="about-company">
-        <h2>About the Company</h2>
-        <p>We are a company dedicated to providing excellent service to our clients. Our mission is to deliver quality solutions while fostering a strong relationship with our customers.</p>
-    </section>
+    <!--Main Content-->
+    <main>
+        <!--Section Our Profile-->
+        <section id="section-profile">
+            <header>
+                <h1>Our Profile</h1>
+            </header>
+            <article>
+                <div class="photo-banner" aria-label="Banner Image"></div> 
 
-    <section class="vision-mission">
-        <h2>Vision and Mission</h2>
-        <p><strong>Vision:</strong> To be a leader in our industry, known for innovation and customer satisfaction.</p>
-        <p><strong>Mission:</strong> To deliver superior solutions through expertise, collaboration, and integrity.</p>
-    </section>
+                <h2>About the Company</h2>
+                <p>Kami adalah AetherWear, perusahaan fashion yang berdedikasi untuk menciptakan pakaian stylish dan berkelanjutan. Didirikan pada 2024, kami mengutamakan kualitas dan inovasi dalam setiap koleksi.</p>
+
+                <h2>Vision</h2>
+                <p>Menjadi pemimpin dalam fashion berkelanjutan dan menjadi pilihan utama bagi pelanggan yang peduli lingkungan.</p>
+
+                <h2>Mission</h2>
+                <p> 1. Menawarkan pakaian berkualitas tinggi dengan desain inovatif.
+                    2. Mendorong kesadaran akan fashion berkelanjutan.
+                    3. Memberikan pengalaman belanja yang personal dan memuaskan.
+                    </p>
+                
+                <h2>Welcome, <span id="userNameProfile">Name</span>!</h2> <!-- Placeholder for user name -->
+            </article>
+        </section>
+    </main>
+
+    <hr />
 
     <footer>
-        <p>Created by Cannesya Aurellia Naftalie</p>
+        <p>&copy; 2024 Page AetherWear. All Rights Reserved.</p>
     </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>

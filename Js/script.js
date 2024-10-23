@@ -1,6 +1,16 @@
 // Welcome Message Script
 document.addEventListener('DOMContentLoaded', function() {
-    let name = prompt("Please enter your name:");
+    // Check if the name is already saved in localStorage
+    let name = localStorage.getItem('userName');
+
+    // If there's no name saved, prompt the user for their name
+    if (!name) {
+        name = prompt("Please enter your name:");
+        // Save the entered name in localStorage
+        localStorage.setItem('userName', name);
+    }
+
+    // Display the name on the main page
     document.getElementById('userName').innerText = name;
 });
 
@@ -13,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const currentTime = new Date().toLocaleString();
 
         // Get form data
-        const name = document.getElementById('name').value;
+        const msgName = document.getElementById('name').value; // Fixed the ID here
         const dob = document.getElementById('dob').value;
         const gender = document.querySelector('input[name="gender"]:checked').value;
         const message = document.getElementById('message').value;
@@ -22,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const tableRow = `
             <tr>
                 <td>${currentTime}</td>
-                <td>${name}</td>
+                <td>${msgName}</td>
                 <td>${dob}</td>
                 <td>${gender}</td>
                 <td>${message}</td>
@@ -30,12 +40,29 @@ document.addEventListener('DOMContentLoaded', function() {
         `;
 
         // Append the new row to the table body
-        document.getElementById('formResult').innerHTML += tableRow;
+        document.getElementById('resultTable').querySelector('tbody').innerHTML += tableRow;
 
         // Show the table if it's hidden
         document.getElementById('resultTable').style.display = 'table';
 
         // Clear the form after submission
         document.getElementById('messageForm').reset();
+    });
+
+    // Smooth Scroll for Navigation Links
+    document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            const targetID = this.getAttribute('href');
+            const targetElement = document.querySelector(targetID);
+
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
     });
 });
